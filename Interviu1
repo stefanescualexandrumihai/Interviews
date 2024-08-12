@@ -1,0 +1,20 @@
+1. K8S ( care sunt ):
+   Voia sa ii spun de api-server, kube-scheduler, controller-manager, kubelet
+2. NETWORKING - Intre podurile de pe noduri diferite, poate ceva de kube-proxy si in cazul in care era cilium instalat ca si CNI, ceva date despre cilium ( in contextul ciulim, acesta poate fi privit ca un router pe fiecare nod )
+   Ideea de baza e sa stii cum se transmit pachetele intre poduri pe acelasi nod, pe noduri diferite si in afara nodurilor, in internet.
+3. PODS -Request si limit pe pod-uri ( cate poduri se pot crea pe un nod cu 32 gb ram , daca am request 1GB si limit 2GB )
+4. LINUX - Inode pe linux
+5. MONITORING - ce metrici urmaresc in aplicatii ( cpu, ram, nr of requests, conexiuni la baza de date, garbage collector, http code, etc )
+   Aici se poate urmari pe pod-uri, in cazul in care e autoscaler, care replici trebuiau sa fie si cate sunt up&running de fapt
+6. LOG - Solutii de logging - fluentbit (ca si sidecar/daemonset) -> Logstash -> Elasticsearch || fluenbit -> Splunk
+   Ceva info despre fiecare solutie ( fluentbit fiind folosit cam peste tot, e ok daca se cunosc componentele acestuia si ceva configs etc. 
+7. VM vs CONTAINER - aduse in discutie cgroups&namespace 
+8. DOCKERFILE - componente ( ce face acel FROM , ce putem sa mai punem in el etc - un dockerfile simplu explicat ), multi stage build, multiplatform ( linux/amd64 linux/arm64 )
+9. ARGOCD - Ce e argo? Cam care e arhitectura lui ( obiecte de tip Cluster, Application, ApplicationSet - explicate fiecare ) , unde poate fi deployat argo ( doar k8s :) ), cu ce ne ajuta argocd, daca putem face sync dintr-un argo pe mai multe clustere, chestii de genul
+   La argo se mai poate merge pe arhitectura app of apps.
+10. HELM - Ce e helm? La ce ne ajuta helm? structura fisierelor intr-un helm chart si de preferat sa fii facut cateva helm chart-uri :) + helm dependencies 
+    Aici se poate merge pe integrarea helm si argocd
+11. Repositories ( gen nexus / jfrog )
+12. Ce inteleg prin cloud?  ( eu am zis ca nu stiu cloud la momentul respectiv )
+13. Cert manager - procesul din spate
+14. kube-state-metrics & metric-server ( ceva date generale despre ele, ce fac, de unde iau date, la ce ne trebuie, etc. ) 
